@@ -144,8 +144,8 @@ a { text-decoration: none; }
 }
 .nav-links a {
   color: rgba(255,255,255,0.78);
-  font-size: 15px; font-weight: 400;
-  padding: 8px 13px; border-radius: var(--r-sm);
+  font-size: 16px; font-weight: 500;
+  padding: 8px 15px; border-radius: var(--r-sm);
   transition: color 0.2s, background 0.2s;
 }
 .nav-links a:hover, .nav-links a.active {
@@ -159,8 +159,8 @@ a { text-decoration: none; }
   display: inline-flex; align-items: center; gap: 6px;
   background: var(--amber); color: var(--white);
   font-family: var(--font-body);
-  font-size: 14px; font-weight: 600;
-  padding: 9px 17px; border-radius: var(--r-sm);
+  font-size: 15px; font-weight: 600;
+  padding: 11px 20px; border-radius: var(--r-sm);
   transition: background 0.2s; letter-spacing: 0.01em;
 }
 .nav-btn:hover { background: #b5751f; }
@@ -254,17 +254,17 @@ a { text-decoration: none; }
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--amber); color: var(--white);
   font-family: var(--font-body);
-  font-size: 15px; font-weight: 600;
-  padding: 14px 26px; border-radius: var(--r-sm);
+  font-size: 17px; font-weight: 600;
+  padding: 16px 30px; border-radius: var(--r-sm);
   transition: background 0.2s, transform 0.18s; letter-spacing: 0.01em;
 }
 .btn-primary:hover { background: #b5751f; transform: translateY(-1px); }
 
 .btn-ghost {
   display: inline-flex; align-items: center; gap: 8px;
-  color: rgba(255,255,255,0.62); font-size: 15px; font-weight: 400;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.75); font-size: 17px; font-weight: 500;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.28);
   transition: color 0.2s, border-color 0.2s;
 }
 .btn-ghost:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
@@ -316,6 +316,8 @@ a { text-decoration: none; }
 .topics {
   background: var(--forest);
   overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .topics::-webkit-scrollbar { display: none; }
 .topics-inner {
@@ -324,48 +326,48 @@ a { text-decoration: none; }
 }
 .topic-link {
   display: flex; align-items: center;
-  padding: 15px 20px;
-  color: rgba(255,255,255,0.5);
+  padding: 20px 24px;
+  color: rgba(255,255,255,0.65);
   font-family: var(--font-body);
-  font-size: 12px; font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  border-bottom: 2px solid transparent;
+  font-size: 14px; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  border-bottom: 3px solid transparent;
   transition: color 0.2s, border-color 0.2s; white-space: nowrap;
 }
 .topic-link:hover, .topic-link.active {
-  color: var(--gold); border-bottom-color: var(--amber);
+  color: var(--white); border-bottom-color: var(--amber);
 }
 
 /* =============================================
    TOP PICKS  — section 2, before articles
 ============================================= */
 .picks {
-  background: var(--deep); padding: 88px 0;
+  background: var(--bone); padding: 88px 0;
   position: relative; overflow: hidden;
 }
 .picks::before {
   content: ''; position: absolute;
   top: -120px; right: -120px; width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(200,133,42,0.07) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(200,133,42,0.06) 0%, transparent 65%);
   pointer-events: none;
 }
-.picks .kicker { color: var(--honey); }
-.picks .kicker::after { background: rgba(255,255,255,0.1); }
-.picks .section-title { color: var(--white); }
-.picks .section-sub { color: rgba(255,255,255,0.68); }
+.picks .kicker { color: var(--amber); }
+.picks .kicker::after { background: var(--mist); }
+.picks .section-title { color: var(--ink); }
+.picks .section-sub { color: var(--slate); }
 
 .picks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 
 .pick-card {
   display: flex; flex-direction: column;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
+  background: var(--white);
+  border: 1px solid #e0e8e6;
   border-radius: var(--r-md); overflow: hidden;
-  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+  transition: box-shadow 0.25s, transform 0.25s;
 }
 .pick-card:hover {
-  background: rgba(255,255,255,0.07);
-  border-color: rgba(200,133,42,0.28); transform: translateY(-3px);
+  box-shadow: 0 18px 48px rgba(26,51,48,0.10);
+  border-color: rgba(200,133,42,0.25); transform: translateY(-3px);
 }
 .pick-img { width: 100%; height: 190px; object-fit: cover; display: block; }
 
@@ -375,28 +377,28 @@ a { text-decoration: none; }
   font-family: var(--font-body); font-size: 10px; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
   padding: 4px 10px; border-radius: 100px;
-  background: rgba(200,133,42,0.18); color: var(--honey); margin-bottom: 12px;
+  background: rgba(200,133,42,0.12); color: var(--amber); margin-bottom: 12px;
 }
 .pick-card h3 {
   font-family: var(--font-body); font-size: 16px; font-weight: 600;
-  color: var(--white); line-height: 1.4; flex: 1; margin-bottom: 16px;
+  color: var(--ink); line-height: 1.4; flex: 1; margin-bottom: 16px;
 }
 .pick-cta {
   display: flex; align-items: center; gap: 6px;
   font-family: var(--font-body); font-size: 13px; font-weight: 600;
-  color: var(--honey); letter-spacing: 0.02em;
+  color: var(--amber); letter-spacing: 0.02em;
 }
 
 .picks-more { text-align: center; margin-top: 44px; }
 .btn-outline-amber {
   display: inline-flex; align-items: center; gap: 8px;
-  border: 1.5px solid rgba(200,133,42,0.35); color: var(--honey);
-  font-family: var(--font-body); font-size: 14px; font-weight: 600;
-  padding: 12px 26px; border-radius: var(--r-sm); letter-spacing: 0.02em;
-  transition: border-color 0.2s, background 0.2s;
+  border: 1.5px solid var(--forest); color: var(--forest);
+  font-family: var(--font-body); font-size: 16px; font-weight: 600;
+  padding: 14px 30px; border-radius: var(--r-sm); letter-spacing: 0.01em;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
 }
 .btn-outline-amber:hover {
-  border-color: var(--amber); background: rgba(200,133,42,0.08);
+  background: var(--forest); color: var(--white);
 }
 
 /* =============================================
@@ -571,11 +573,11 @@ a { text-decoration: none; }
 }
 .newsletter-form input::placeholder { color: rgba(255,255,255,0.3); }
 .newsletter-form button {
-  padding: 13px 18px;
+  padding: 14px 22px;
   background: var(--amber); border: none; color: var(--white);
-  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  font-family: var(--font-body); font-size: 15px; font-weight: 600;
   cursor: pointer; transition: background 0.2s;
-  white-space: nowrap; letter-spacing: 0.02em;
+  white-space: nowrap; letter-spacing: 0.01em;
 }
 .newsletter-form button:hover { background: #b5751f; }
 .newsletter-note { font-size: 11px; color: rgba(255,255,255,0.26); }
@@ -654,6 +656,26 @@ a { text-decoration: none; }
   .card-main .card-img { height: 220px; }
   .card-sm .card-img { height: 140px; }
 
+  /* Two small cards sit side by side on tablet */
+  .featured-grid .card-sm:nth-child(2),
+  .featured-grid .card-sm:nth-child(3) {
+    grid-column: auto;
+  }
+  .featured-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .featured-grid .card-sm {
+    display: flex;
+    flex-direction: row;
+  }
+  .featured-grid .card-sm .card-img {
+    width: 130px;
+    min-width: 130px;
+    height: auto;
+    min-height: 110px;
+  }
+
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
 
   .about-inner { grid-template-columns: 1fr; gap: 44px; }
@@ -705,7 +727,6 @@ a { text-decoration: none; }
           <li><a href="/" class="active">Home</a></li>
           <li><a href="/top-wellness-picks/">Top Picks</a></li>
           <li><a href="/blog/">Blog</a></li>
-          <li><a href="/about/">About</a></li>
           <li><a href="/contact/">Contact</a></li>
         </ul>
 
@@ -725,7 +746,6 @@ a { text-decoration: none; }
       <a href="/">Home</a>
       <a href="/top-wellness-picks/">Top Picks</a>
       <a href="/blog/">Blog</a>
-      <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
       <a href="/pet-wellness-journey/" class="nav-drawer-cta">Start wellness journey</a>
     </div>
